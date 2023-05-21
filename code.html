@@ -1,9 +1,8 @@
 <!doctype html>
 <html lang="en" class="h-100">
 
-
 <head>
-    <title>Centus - A Project by F4</title>
+    <title>Free 5 - A Project by F4</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -22,7 +21,7 @@
     <!-- Navigation Bar -->
     <nav class="navbar navbar-expand-md navbar-dark fixed-top">
         <div class="container-fluid">
-            <a class="navbar-brand" href="index.html"><img src="img/f4 (3).png" class="d-inline" width="30" height="30"> CENTUS</a>
+            <a class="navbar-brand" href="index.html"><img src="img/f4 (3).png" class="d-inline" width="30" height="30"> FREE 5</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
                 aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -55,61 +54,15 @@
     <!-- Main Section -->
     <main class="flex-shrink-0">
         <div class="container py-5 px-5 mt-5">
-            <h1 class="border-1 border-bottom border-dark">Centus' Code</h1>
+            <h1 class="border-1 border-bottom border-dark">Free5's Code</h1>
             <div class="row row-cols-1 row-cols-md-2">
                 <div class="col-lg-8">
                     <pre class="line-numbers"><code class="language-javascript">
-                        //get values from interface - controller/start
-                        function getValues(){
-                            //get value from page
-                            let startValue = document.getElementById("startValue").value;
-                            let endValue = document.getElementById("endValue").value;
-
-                            //parse into Integers - needed to validate input
-                            startValue = parseInt(startValue);
-                            endValue = parseInt(endValue);
-
-                            if(Number.isInteger(startValue) && Number.isInteger(endValue)){
-                                //call generateNumbers
-                                let numbers = generateNumbers(startValue, endValue);
-                                //call displayNumbers
-                                displayNumbers(numbers);
-                            }
-                            else{
-                                alert("Please enter an Integer");
-                            }
-                        }
-
-                        //generate numbers from start to endvalue - model/logic
-                        function generateNumbers(startValue, endValue){
-                            let numbers = [];
-                            
-                            //get all numbers from start to end
-                            for (let index = startValue; index <= endValue; index++) {
-                                //execute loop until index = endValue
-                                numbers.push(index);
-                            }
-                            return numbers;
-                        }
-
-                        //display bold numbers - view/display
-                        function displayNumbers(numbers){
-                            let templateRows = "";
-                            for (let index = 0; index < numbers.length; index++) {
-                                let className = "even";
-                                let number = numbers[index]; //assignemnt check
-                                if(number % 2 == 0) //equality check
-                                {
-                                    className = "even";}
-                                else {className = "odd";}
-                                //The HTML Table code doesn't render, see source code on GitHub
-                                templateRows += `<tr><td class="${className}" >${number}</td></tr>`; //creating HTML Table
-                            };
-                            document.getElementById("results").innerHTML = templateRows;
+                        //Insert Javascript Here
                     </code></pre>
                 </div>
                 <div class="col-lg-4">
-                    <h3>The Goal of CENTUS</h3>
+                    <h3>The Goal of FREE 5</h3>
                     <p>Centus - The goal of Centus is to learn about Variables, Functions, Loops, Arrays & Using the Debugger. It is our 1st example of Model View Controller. And our 1st use of Prism to display our Code.</p>
                     <h4>getValues</h4>
                     <p>getValue function. how to use getValues.</p>

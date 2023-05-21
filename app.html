@@ -2,7 +2,7 @@
 <html lang="en" class="h-100">
 
 <head>
-    <title>CENTUS - A Project by F4</title>
+    <title>Free 5 - A Project by F4</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -20,7 +20,7 @@
     <!-- Navigation Bar -->
     <nav class="navbar navbar-expand-md navbar-dark fixed-top">
         <div class="container-fluid">
-            <a class="navbar-brand" href="index.html"><img src="img/f4 (3).png" class="d-inline" width="30" height="30"> CENTUS</a>
+            <a class="navbar-brand" href="index.html"><img src="img/f4 (3).png" class="d-inline" width="30" height="30"> FREE 5</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
                 aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -55,25 +55,26 @@
         <div class="container mt-5">
             <div class="row row-cols-1 row-cols-lg-2">
                 <div class="col-lg-4 border-end border-2">
-                    <h1>CENTUS</h1>
+                    <h1>Free 5</h1>
                     <h4 class="lead">
-                        Did you ever want to know all the numbers to 100 without having to count?
+                        Are you more of a Free or a 5 person?
                     </h4>
                     <h2 class="mt-5 border-bottom border-2">Instructions</h2>
-                    <p>Enter a starting & an ending value. Click on Display.</p>
+                    <p>Enter a multiple of 3 & a multiple of 5. Click on Deploy.</p>
                 </div>
                 <div class="col-lg-8">
                     <div>
-                        <h5>Enter Values</h5>
                         <form class="row gy-2 gx-3">
                             <div class="col">
-                                <input id="startValue" type="number" class="form-control" placeholder="Start Value" value=0 aria-label="Start Value">
+                                <h5>Enter a Free number</h5>
+                                <input id="freeValue" type="number" class="form-control" placeholder="Free Value" value=3 aria-label="Free Value">
                             </div>
                             <div class="col">
-                                <input id="endValue" type="number" class="form-control" placeholder="End Value" value=100 aria-label="End Value">
+                                <h5>Enter a 5 number</h5>
+                                <input id="fiveValue" type="number" class="form-control" placeholder="5 Value" value=5 aria-label="5 Value">
                             </div>
                             <div class="col-12 d-flex justify-content-end">
-                                <button id="btnSubmit" type="button" class="btn btn-dark btn-lg">Deploy CENTUS</button>
+                                <button id="btnSubmit" type="button" class="btn btn-dark btn-lg">Deploy Free5</button>
                             </div>
                         </form>
                         <h2 class="mt-5 border-bottom border-2">Results</h2>
@@ -120,7 +121,7 @@
     </script>
     <script src="js/site.js"></script>
     <script>
-        document.getElementById("btnSubmit").addEventListener("click", getValues)
+        document.getElementById("btnSubmit").addEventListener("click", getValues);
     </script>
 </body>
 

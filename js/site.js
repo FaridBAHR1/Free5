@@ -10,7 +10,7 @@ function getValues(){
 
     //validate that "freeValue" & "fiveValue" are integers
     if(Number.isInteger(freeValue) && Number.isInteger(fiveValue)){  //test logical conjunction
-        //call Free5
+        //call Free5, Free5A or Free5B 
         let f5Array = Free5(freeValue, fiveValue);
         //call displayData
         displayData(f5Array);
@@ -43,6 +43,51 @@ function Free5(freeValue, fiveValue){
         //if none push Integer into Array
         else{returnArray.push(i);}        
     }
+    return returnArray;
+}
+
+//Free5 - Alternative
+function Free5A(freeValue, fiveValue){
+    let returnArray = [];
+
+    let Free = false;
+    let Five = false;
+
+    for (let i = 0; i <= 100; i++) {
+        Free = i % freeValue == 0;
+        Five = i % fiveValue == 0;
+        //alternative to If/Then Statement
+        switch(true){
+            case Free && Five:{
+                returnArray.push('Free5');
+                break;}
+            case Free:{
+                returnArray.push('Free');
+                break;
+            }
+            case Five:{
+                returnArray.push('Five');
+                break;
+            }
+            default:{
+                returnArray.push(i);
+                break;
+            }
+        }
+    }
+    return returnArray;
+}
+
+//Free5 - Alternative 2
+function Free5B(freeValue, fiveValue){
+    let returnArray = [];
+
+    for (let i = 1; i <= 100; i++){
+        //alternative modulus
+        let value = ((i % freeValue == 0 ? 'Free' : '') + (i % fiveValue == 0 ? '5' : '') || i);
+        returnArray.push(value);
+    }
+
     return returnArray;
 }
 

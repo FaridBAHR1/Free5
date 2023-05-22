@@ -12,9 +12,8 @@ function getValues(){
     if(Number.isInteger(freeValue) && Number.isInteger(fiveValue)){  //test logical conjunction
         //call Free5
         let f5Array = Free5(freeValue, fiveValue);
-        f5Array = Free5(freeValue, fiveValue);
         //call displayData
-        displayData(f5data);
+        displayData(f5Array);
     }
     else{
         //ask user to enter Integers only
@@ -29,13 +28,10 @@ function Free5(freeValue, fiveValue){
     
     //loop from iterator 1 to 100
     for (let i = 1; i <= 100; i++) {
-        //execute loop until index = endValue
-
         //check if divisible by 3 & 5
         if(i % freeValue == 0 && i % fiveValue == 0){
             //push 'Free5' into array instead of Integer
-            returnArray.push('Free5');
-        }
+            returnArray.push('Free5');}
         //check if divisible by 3
         else if(i % freeValue == 0){
             //push 'Free' into array instead of Integer
@@ -53,7 +49,7 @@ function Free5(freeValue, fiveValue){
 //display bold numbers - view/display
 function displayData(f5Array){
     //get table body element from page/document
-    let templateBody = document.getElementById("results");
+    let tableBody = document.getElementById("results");
 
     //get template row
     let templateRow = document.getElementById("f5Template");
@@ -67,16 +63,16 @@ function displayData(f5Array){
         let tableRow = document.importNode(templateRow.content, true);
         //determine template width
         let rowCols = tableRow.querySelectorAll("td");
-        rowCols[0].textContent = fbData[i];
-        rowCols[1].textContent = fbData[i+1];
-        rowCols[2].textContent = fbData[i+2];
-        rowCols[3].textContent = fbData[i+3];
-        rowCols[4].textContent = fbData[i+4];
+        rowCols[0].textContent = f5Array[index];
+        rowCols[1].textContent = f5Array[index+1];
+        rowCols[2].textContent = f5Array[index+2];
+        rowCols[3].textContent = f5Array[index+3];
+        rowCols[4].textContent = f5Array[index+4];
 
         //append value in table row
         tableBody.appendChild(tableRow);
       };
 
     //Add all rows to table
-    document.getElementById("results").innerHTML = templateRows;
+    //document.getElementById("results").innerHTML = templateRows;
 }

@@ -5,6 +5,13 @@
     --white-color: #dff3e4;
 }
 
+
+@media screen and (max-width: 991.33px) {
+    .border-end {
+    border: none !important;
+    }
+    }
+
 .odd{font-weight: 100;}
 
 .even{

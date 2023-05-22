@@ -22,6 +22,7 @@ function getValues(){
 }
 
 //generate numbers from free to fiveValue - model/logic
+//ForLoop
 function Free5(freeValue, fiveValue){
     //create blank array
     let returnArray = [];
@@ -46,7 +47,7 @@ function Free5(freeValue, fiveValue){
     return returnArray;
 }
 
-//Free5 - Alternative
+//Free5 - Alternative : SwitchStatement
 function Free5A(freeValue, fiveValue){
     let returnArray = [];
 
@@ -78,7 +79,7 @@ function Free5A(freeValue, fiveValue){
     return returnArray;
 }
 
-//Free5 - Alternative 2
+//Free5 - Alternative 2 : TernaryOperator
 function Free5B(freeValue, fiveValue){
     let returnArray = [];
 

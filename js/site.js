@@ -11,47 +11,51 @@ function getValues(){
     //validate that "freeValue" & "fiveValue" are integers
     if(Number.isInteger(freeValue) && Number.isInteger(fiveValue)){  //test logical conjunction
         //call Free5
-        let f5data = generateNumbers(freeValue, fiveValue);
-        f5data = Free5(freeValue, fiveValue);
+        let f5Array = Free5(freeValue, fiveValue);
+        f5Array = Free5(freeValue, fiveValue);
         //call displayData
         displayData(f5data);
     }
     else{
+        //ask user to enter Integers only
         alert("Please enter Integers");
     }
 }
 
 //generate numbers from free to fiveValue - model/logic
 function Free5(freeValue, fiveValue){
+    //create blank array
     let returnArray = [];
     
-    //get all numbers from start to end
-    for (let index = freeValue; index <= fiveValue; index++) {
+    //loop from iterator 1 to 100
+    for (let i = 1; i <= 100; i++) {
         //execute loop until index = endValue
 
         //check if divisible by 3 & 5
-        
-        //push 'Free5' into array instead of Integer
-
+        if(i % freeValue == 0 && i % fiveValue == 0){
+            //push 'Free5' into array instead of Integer
+            returnArray.push('Free5');
+        }
         //check if divisible by 3
-        
-        //push 'Free' into array instead of Integer
-
+        else if(i % freeValue == 0){
+            //push 'Free' into array instead of Integer
+            returnArray.push('Free');}
         //check if divisible by 5
-        
-        //push '5' into array instead of Integer
-
+        else if(i % fiveValue == 0){
+            //push '5' into array instead of Integer
+            returnArray.push('5');}
         //if none push Integer into Array
-        returnArray.push(index);
-        
+        else{returnArray.push(i);}        
     }
     return returnArray;
 }
 
 //display bold numbers - view/display
-function displayData(numbers){
+function displayData(f5Array){
     let templateRows = "";
-    for (let index = 0; index < numbers.length; index++) {
+
+    //loop over Array & create tablerow for each item
+    for (let index = 0; index < f5Array.length; index++) {
         let className = "even";
         let number = numbers[index]; //assignemnt check
         if(number % 2 == 0) //equality check
@@ -60,5 +64,7 @@ function displayData(numbers){
         else {className = "odd";}
         templateRows += `<tr><td class="${className}" >${number}</td></tr>`; //creating HTML Table
     };
+
+    //Add all rows to table
     document.getElementById("results").innerHTML = templateRows;
 }

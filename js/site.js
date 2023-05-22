@@ -39,7 +39,7 @@ function Free5(freeValue, fiveValue){
         //check if divisible by 5
         else if(i % fiveValue == 0){
             //push '5' into array instead of Integer
-            returnArray.push('5');}
+            returnArray.push('Five');}
         //if none push Integer into Array
         else{returnArray.push(i);}        
     }
@@ -63,10 +63,15 @@ function displayData(f5Array){
         let tableRow = document.importNode(templateRow.content, true);
         //determine template width
         let rowCols = tableRow.querySelectorAll("td");
+        rowCols[0].classList.add(f5Array[index]);
         rowCols[0].textContent = f5Array[index];
+        rowCols[1].classList.add(f5Array[index+1]);
         rowCols[1].textContent = f5Array[index+1];
+        rowCols[2].classList.add(f5Array[index+2]);
         rowCols[2].textContent = f5Array[index+2];
+        rowCols[3].classList.add(f5Array[index+3]);
         rowCols[3].textContent = f5Array[index+3];
+        rowCols[4].classList.add(f5Array[index+4]);
         rowCols[4].textContent = f5Array[index+4];
 
         //append value in table row

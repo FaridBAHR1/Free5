@@ -67,6 +67,19 @@ footer .social>a:hover{
     color: var(--secondary-color);
 }
 
+.Free{
+    color: rgb(0, 218, 218);
+}
+
+.Five{
+    color: rgb(127, 0, 254);
+}
+
+.Free5{
+    color: rgb(0, 76, 255);
+    font-weight: bold;
+}
+
 code[class*="language-"],
         pre[class*="language-"] {
         white-space: pre-wrap;
